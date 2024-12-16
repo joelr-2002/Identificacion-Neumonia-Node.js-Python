@@ -29,6 +29,11 @@ project-root/
 ├── uploads/
     └── # Aquí se subirán las imágenes a comparar
 ├── python/
+    ├── chest_xray/
+        ├── train/
+            ## AQUÍ IRÁ EL DATASET DE IMÁGENES PARA ENTRENAR EL MODELO ##
+        └── test/
+            ## AQUÍ IRÁ EL DATASET DE IMÁGENES PARA QUE EL MODELO DETERMINE SU EFICACIA ##
     ├── requirements.txt
     ├── app.py
     └── test.py
@@ -86,6 +91,9 @@ npm install
    ```
 
 ### Ejecución del Proyecto Python
+
+### Recuerde colocar el dataset de imágenes en **python/chest_xray/train** y **python/chest_xray/test**
+Deben ser imágenes de buena calidad, ya que estas luego serán redimensionadas a 244x244 para poder entrenar lo más rápido y "preciso" el modelo.
 
 #### Entrenamiento del Modelo
 ```bash
