@@ -12,8 +12,8 @@ checkpoint = ModelCheckpoint("model.h5", monitor='val_loss', verbose=1, save_bes
 IMAGESHAPE = [224, 224, 3] #Provide image size as 224 x 224 this is a fixed-size for VGG16 architecture
 vgg_model = VGG16(input_shape=IMAGESHAPE, weights='imagenet', include_top=False)
 #3 signifies that we are working with RGB type of images.
-training_data = 'C:/xampp/htdocs/ProyectoIA/python/chest_xray/train'
-testing_data = 'C:/xampp/htdocs/ProyectoIA/python/chest_xray/test' #Give our training and testing path
+training_data = 'C:/python/chest_xray/train'
+testing_data = 'C:/python/chest_xray/test' #Give our training and testing path
 
 for each_layer in vgg_model.layers:
 	each_layer.trainable = False #Set the trainable as False, So that all the layers would not be trained.
